@@ -1,3 +1,3 @@
 # 语法
 ## JavaScript的语法与Java类似，但是它是弱类型语言
-## 同时JavaScript并不强制在每个语句的结尾加;
+## 同时JavaScript并不强制在每个语句的结尾加 “;”
