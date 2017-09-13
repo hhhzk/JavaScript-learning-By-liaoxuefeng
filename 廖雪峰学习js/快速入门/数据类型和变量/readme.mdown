@@ -1,0 +1,92 @@
+## 数据类型和变量
+### JavaScript的数据类型
+分别是：数字、字符串、布尔、数组、对象、Null、Undefined
+#### JavaScript数字
+JavaScript只有一种数字类型。数字可以带小数点，也可以不带：
+````
+var x1 = 34.00    //使用小数点来写
+var x2 = 34       //不适用小数点来写
+````
+极大或极小的数字可以通过科学（指数）计数法来书写.
+
+#### JavaScript字符串
+字符串是存储字符的变量。
+字符串可以是引号（单引号或者双引号都可以）中的任意文本。
+````
+var name = 'hhhzk';
+var name = "hhhzk";
+````
+
+#### JavaScript布尔
+布尔值只有true和false两种值。
+````
+true; //这是一个true值
+false; //这是一个false值
+2 > 1; //这是一个ture值
+2 >= 3; //这是一个false值
+````
+以及一些逻辑操作符，||(或运算)，&&(与运算)，!(非运算)
+
+#### JavaScript数组
+创建一个名为cars的数组：
+````
+var cars = new Array();
+cars[0] = 'Audi';
+cars[1] = 'BMW';
+cars[2] = 'Volvo';
+````
+或者:
+````
+var cars = new Array('Audi','BMW','Volvo);
+````
+或者：
+````
+var cars = ['Audi','BMW','Volvo'];
+````
+
+#### JavaScript对象
+对象由花括号分割。在括号内部，对象的属性以名称和值对的形式(name: value)来定义。
+````
+var person = {
+	name: 'hhhzk',
+	age: 23,
+	address: 'Hangzhou'
+}
+
+person.age; //23
+````
+JavaScript对象的键都是字符串类型，值可以是任意数据类型。
+
+#### null和undefined
+null表示空。
+undefined表示未定义。
+````
+var a;
+a; //null
+b; //undefined
+````
+
+### JavaScript中的变量
+变量的概念基本上和初中代数的方程变量是一致的，只不过变量可以是任意数值。
+````
+var a; //声明了变量。
+var $b = 1; //声明了$b,同时给$b赋值，此时$b的值为1
+var i = true; //声明了变量i为布尔值true
+var t = null; //t的值是null
+````
+JavaScript是动态语言，与之对应的是静态语言。动态语言的变量本身类型不固定，而静态语言在定义变量时必须指定变量类型。
+````
+int a = 123;
+a = 'ABC';
+````
+
+### strict模式
+JavaScript在设计之初，为了方便初学者学习，并不强制要求用var申明变量。这个设计错误带来了严重的后果：如果一个变量没有通过var申明就被使用，那么该变量就自动被申明为全局变量：
+````
+i = 10; //i现在是全局变量
+````
+为了修补JavaScript这一严重设计缺陷，ECMA在后续规范中推出了strict模式，在strict模式下运行的JavaScript代码，强制通过var申明变量，未使用var申明变量就使用的，将导致运行错误。
+在第一行代码协商：
+````
+'use strict'
+````
