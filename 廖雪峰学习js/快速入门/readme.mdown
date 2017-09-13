@@ -1,0 +1,29 @@
+## JavaScript快速入门
+### JavaScript代码可以镶嵌在网页的任何地方，不过通常把它放在&lt;head&gt;标签中
+````
+<html>
+	<head>
+		<script>
+			alert('这是一段JavaScript代码！');
+		</script>
+	</head>
+</html>
+````
+### 第二种方法是编写一个单独的.js文件，然后引用
+````
+<html>
+	<head>
+		<script src='script.js'></script>
+	</head>
+</html>
+````
+把JavaScript代码放入一个单独的文件的优势在于利于维护，并且可以多个页面各自引用同一份文件。
+
+### 如何编写JavaScript代码
+#### Sublime Text（本人目前使用的）
+#### Notepad++等等
+
+### 如何运行JavaScript代码
+在浏览器中按F12，在console中即可运行。
+
+![在浏览器中运行](http://upload-images.jianshu.io/upload_images/5531033-fe064f0679c96bcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
