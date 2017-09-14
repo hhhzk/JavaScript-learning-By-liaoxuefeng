@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量作用域</title>
+	<script>
+		function foo () {
+			var x = 'hello,' + y;
+			alert(x);
+			var y = 'hhhzk';
+		}
+		// foo();
+		function test () {
+			var course = 'Learn JavaScript!';
+			alert(course);
+			alert(window.course);
+		}
+		test();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
