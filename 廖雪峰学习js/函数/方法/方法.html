@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>方法</title>
+	<script>
+		var count = 0;
+		var oldParseInt = parseInt;
+
+		window.parseInt = function () {
+			count += 1;
+			return oldParseInt.apply(null, arguments);
+		}
+
+		parseInt('10');
+		parseInt('10');
+		parseInt('10');
+		console.log(count);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
